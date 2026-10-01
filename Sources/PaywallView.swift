@@ -54,6 +54,7 @@ struct PaywallView: View {
                 .accessibilityLabel("Close")
             }
         }
+        .task { if purchases.products.isEmpty { await purchases.loadProducts() } }
         .task {
             try? await Task.sleep(for: .seconds(1.0))
             withAnimation { showClose = true }
@@ -64,6 +65,9 @@ struct PaywallView: View {
             }
         }
         .interactiveDismissDisabled(buying)
+        .alert("Purchase", isPresented: Binding(get: { purchases.errorMessage != nil }, set: { if !$0 { purchases.errorMessage = nil } })) {
+            Button("OK", role: .cancel) {}
+        } message: { Text(purchases.errorMessage ?? "") }
     }
 
     // MARK: Sections
@@ -173,12 +177,16 @@ struct PaywallView: View {
     private var cta: some View {
         VStack(spacing: 10) {
             Button {
-                guard let p = purchases.product(selected) else {
-                    Task { await purchases.loadProducts() }
-                    return
-                }
                 buying = true
-                Task { await purchases.purchase(p); buying = false }
+                Task {
+                    if purchases.product(selected) == nil { await purchases.loadProducts() }
+                    if let p = purchases.product(selected) {
+                        await purchases.purchase(p)
+                    } else {
+                        purchases.errorMessage = "This subscription isn't available from the App Store right now. Please check your connection and that you're signed in to the App Store, then try again."
+                    }
+                    buying = false
+                }
             } label: {
                 HStack {
                     if buying || purchases.isLoading { ProgressView().tint(.black) }
@@ -187,6 +195,13 @@ struct PaywallView: View {
             }
             .buttonStyle(PrimaryButtonStyle())
             .disabled(buying)
+            if let status = purchases.storeStatus, !purchases.isLoading {
+                VStack(spacing: 6) {
+                    Text(status).font(.caption2).foregroundStyle(.orange).multilineTextAlignment(.center)
+                    Button("Reload options") { Task { await purchases.loadProducts() } }
+                        .font(.caption.weight(.semibold))
+                }
+            }
             if selected != Config.Product.lifetime && trial(selected) {
                 Label("No payment due now · Cancel anytime", systemImage: "checkmark.shield.fill")
                     .font(.footnote).foregroundStyle(Theme.secondary)

@@ -37,6 +37,8 @@ final class PurchaseManager {
     var paywallReason: PaywallReason?
     var paywallScope = "root"
     var errorMessage: String?
+    /// Human-readable reason when the App Store returned fewer products than expected.
+    private(set) var storeStatus: String?
 
     private var updatesTask: Task<Void, Never>?
 
@@ -59,10 +61,20 @@ final class PurchaseManager {
     func loadProducts() async {
         isLoading = true
         defer { isLoading = false }
+        storeStatus = nil
         do {
-            products = try await Product.products(for: Config.Product.all)
+            var found = try await Product.products(for: Config.Product.all)
+            if found.isEmpty {   // the store sometimes needs a second try right after launch
+                try? await Task.sleep(for: .seconds(1.2))
+                found = try await Product.products(for: Config.Product.all)
+            }
+            products = found
+            if found.count < Config.Product.all.count {
+                let missing = Config.Product.all.filter { id in !found.contains { $0.id == id } }
+                storeStatus = "App Store returned \(found.count) of \(Config.Product.all.count) products. Missing: \(missing.map { $0.split(separator: ".").last.map(String.init) ?? $0 }.joined(separator: ", "))."
+            }
         } catch {
-            errorMessage = "Couldn't load subscription options. Check your connection and try again."
+            storeStatus = "Couldn't reach the App Store: \(error.localizedDescription)"
         }
     }
 
