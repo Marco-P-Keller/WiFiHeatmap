@@ -1,6 +1,6 @@
 import AppKit
 
-let W = 1320, H = 2868
+let W = 1284, H = 2778
 let raw = CommandLine.arguments[1], out = CommandLine.arguments[2]
 struct Slide { let file: String; let line1: String; let line2: String; let sub: String; let c1: NSColor; let c2: NSColor }
 func col(_ r: CGFloat,_ g: CGFloat,_ b: CGFloat) -> NSColor { NSColor(srgbRed: r, green: g, blue: b, alpha: 1) }
@@ -19,8 +19,9 @@ func font(_ size: CGFloat, _ w: NSFont.Weight) -> NSFont {
 func drawText(_ s: String, _ f: NSFont, _ color: NSColor, centerY: CGFloat, ctx: CGContext) {
   let para = NSMutableParagraphStyle(); para.alignment = .center
   let a = NSAttributedString(string: s, attributes: [.font: f, .foregroundColor: color, .paragraphStyle: para])
-  let size = a.size()
-  a.draw(in: CGRect(x: 60, y: centerY - size.height / 2, width: CGFloat(W) - 120, height: size.height * 1.3))
+  let w = CGFloat(W) - 140
+  let r = a.boundingRect(with: CGSize(width: w, height: 1000), options: [.usesLineFragmentOrigin])
+  a.draw(with: CGRect(x: 70, y: centerY - r.height / 2, width: w, height: r.height + 4), options: [.usesLineFragmentOrigin])
 }
 for (i, s) in slides.enumerated() {
   guard let shot = NSImage(contentsOfFile: "\(raw)/\(s.file).png") else { print("missing", s.file); continue }
@@ -37,11 +38,11 @@ for (i, s) in slides.enumerated() {
 
   drawText(s.line1, font(122, .heavy), .white, centerY: CGFloat(H) - 250, ctx: ctx)
   drawText(s.line2, font(122, .heavy), NSColor(srgbRed: 0.35, green: 0.92, blue: 1, alpha: 1), centerY: CGFloat(H) - 385, ctx: ctx)
-  drawText(s.sub, font(46, .medium), NSColor.white.withAlphaComponent(0.78), centerY: CGFloat(H) - 500, ctx: ctx)
+  drawText(s.sub, font(46, .medium), NSColor.white.withAlphaComponent(0.78), centerY: CGFloat(H) - 520, ctx: ctx)
 
   // device frame
   let scale: CGFloat = 0.80
-  let pw = CGFloat(W) * scale, ph = CGFloat(H) * scale
+  let pw = CGFloat(W) * scale, ph = pw * 2868 / 1320
   let px = (CGFloat(W) - pw) / 2, py = CGFloat(H) - 600 - ph
   let rect = CGRect(x: px, y: py, width: pw, height: ph)
   ctx.saveGState()

@@ -1,0 +1,43 @@
+Your Wi-Fi is invisible. Until now.
+
+WiFi Heatmap AR turns your iPhone into a Wi-Fi X-ray. Walk through your home, and coloured tiles appear on your floor in augmented reality: green where your signal is strong, red where it dies. Find every dead zone in minutes instead of guessing.
+
+SEE IT IN AR
+• Live AR heatmap painted on your floor as you walk
+• Drop red pins right where the signal drops out
+• Works room by room, floor by floor
+
+GET YOUR HOME WI-FI SCORE
+• A top-down colour map of everything you scanned
+• A 0–100 score with average, weakest spot and dead-area share
+• Share a clean heatmap with your family, roommates or internet provider
+
+FIX THE PROBLEM
+• Clear tips on where to move your router or place a mesh node
+• Re-scan after every change and watch your score climb
+• Save scans and compare before and after
+
+MORE TOOLS
+• Live signal meter with history graph
+• Speed test: download, upload and ping
+• Dead-spot log: note bad rooms in two taps
+
+PRIVATE BY DESIGN
+• No account, no ads, no tracking
+• Camera and location are only used live in the app
+• Your scans stay on your iPhone
+
+FREE TO TRY
+The signal meter, speed tests, a first AR scan and one saved scan are free. WiFi Heatmap Pro unlocks unlimited AR scanning, unlimited saved scans, personalised fix-it tips, watermark-free sharing and an unlimited dead-spot log.
+
+WiFi Heatmap Pro subscription options:
+• Yearly: $29.99 per year, with a 3-day free trial
+• Weekly: $4.99 per week, with a 3-day free trial
+• Lifetime: $49.99, one-time purchase
+Prices may vary by country. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel any time in your Apple ID settings. Payment is charged to your Apple ID account at confirmation of purchase.
+
+A NOTE ON ACCURACY
+iOS shares Wi-Fi strength with apps as a percentage. WiFi Heatmap AR converts this into an estimated dBm value so you can compare spots in your home. Results show relative differences between locations, not laboratory measurements. AR scanning requires an iPhone with ARKit and a connected Wi-Fi network; Location access is required by iOS to read Wi-Fi information.
+
+Privacy Policy: https://marco-p-keller.github.io/WiFiHeatmap/privacy.html
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
