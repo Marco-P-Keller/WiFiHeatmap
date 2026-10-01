@@ -25,7 +25,7 @@ final class ARScanController: NSObject, ARSessionDelegate {
     private var lastPos: SIMD3<Float>?
     private var floorY: Float?
     private var materials: [Int: UnlitMaterial] = [:]
-    private static let tileMesh = MeshResource.generatePlane(width: 0.3, depth: 0.3, cornerRadius: 0.06)
+    private static let tileMesh = MeshResource.generatePlane(width: 0.26, depth: 0.26, cornerRadius: 0.06)
 
     func attach(_ view: ARView) {
         arView = view
@@ -82,7 +82,7 @@ final class ARScanController: NSObject, ARSessionDelegate {
     }
 
     func buildSession(name: String, downMbps: Double?) -> ScanSession {
-        ScanSession(name: name, ssid: monitor?.ssid ?? "Wi-Fi", samples: samples, pins: pins, downMbps: downMbps)
+        ScanSession(name: name, ssid: monitor?.ssid ?? "Wi-Fi", samples: samples, pins: pins, downMbps: downMbps, estimated: monitor?.usingEstimate)
     }
 
     // MARK: ARSessionDelegate
@@ -142,7 +142,7 @@ final class ARScanController: NSObject, ARSessionDelegate {
         let floor = floorY ?? (pos.y - 1.25)
         samples.append(SignalSample(x: pos.x, y: floor, z: pos.z, q: q))
         tileCount = samples.count
-        placeTile(q: q, at: SIMD3(pos.x, floor + 0.012, pos.z))
+        placeTile(q: q, at: SIMD3(pos.x, floor + 0.012 + Float(tileCount % 12) * 0.0007, pos.z))
         if tileCount % 6 == 0 { Haptics.tap() }
     }
 

@@ -25,6 +25,8 @@ struct ScanSession: Codable, Identifiable, Hashable {
     var samples: [SignalSample]
     var pins: [DeadZonePin]
     var downMbps: Double?
+    /// true when signal strength was estimated from connection quality (iOS reported no strength).
+    var estimated: Bool?
 
     var averageQ: Double { samples.isEmpty ? 0 : samples.map(\.q).reduce(0, +) / Double(samples.count) }
     var weakestQ: Double { samples.map(\.q).min() ?? 0 }
@@ -71,6 +73,7 @@ struct DeadZoneEntry: Codable, Identifiable, Hashable {
     var q: Double
     var ssid: String
     var date = Date()
+    var estimated: Bool?
 }
 
 /// Generates a believable sample home so the app can be demoed in the Simulator and for App Store screenshots.

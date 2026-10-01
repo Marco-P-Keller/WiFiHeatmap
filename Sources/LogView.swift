@@ -93,7 +93,7 @@ struct LogView: View {
                                 .font(.caption2).foregroundStyle(Theme.secondary)
                         }
                         Spacer()
-                        Text("\(Signal.dBm(z.q)) dBm").font(.footnote.monospacedDigit()).foregroundStyle(Signal.color(z.q))
+                        Text(Signal.text(z.q, estimated: z.estimated)).font(.footnote.monospacedDigit()).foregroundStyle(Signal.color(z.q))
                     }
                     .listRowBackground(Color.white.opacity(0.06))
                 }
@@ -122,7 +122,7 @@ struct LogDeadSpotSheet: View {
                         Image(systemName: "wifi").foregroundStyle(Signal.color(monitor.quality))
                         Text(monitor.ssid ?? "No Wi-Fi")
                         Spacer()
-                        Text("\(Signal.label(monitor.quality)) · \(Signal.dBm(monitor.quality)) dBm")
+                        Text("\(Signal.label(monitor.quality)) · \(Signal.text(monitor.quality, estimated: monitor.usingEstimate))")
                             .foregroundStyle(Signal.color(monitor.quality))
                     }
                 }
@@ -156,7 +156,7 @@ struct LogDeadSpotSheet: View {
 
     private func save() {
         if store.deadZones.count >= Config.freeDeadZoneLogLimit && !purchases.requirePro(.deadZoneLimit, scope: "logsheet") { return }
-        store.add(DeadZoneEntry(room: room.trimmingCharacters(in: .whitespaces), note: note, q: monitor.quality, ssid: monitor.ssid ?? "Wi-Fi"))
+        store.add(DeadZoneEntry(room: room.trimmingCharacters(in: .whitespaces), note: note, q: monitor.quality, ssid: monitor.ssid ?? "Wi-Fi", estimated: monitor.usingEstimate))
         Haptics.success()
         dismiss()
     }

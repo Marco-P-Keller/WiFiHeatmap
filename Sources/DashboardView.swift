@@ -3,6 +3,7 @@ import SwiftUI
 struct SignalGauge: View {
     let q: Double
     var connected = true
+    var estimate = false
 
     var body: some View {
         let value = connected ? q : 0
@@ -17,11 +18,11 @@ struct SignalGauge: View {
                 .animation(.smooth(duration: 0.6), value: value)
             VStack(spacing: 4) {
                 if connected {
-                    Text("\(Signal.dBm(value))")
+                    Text(estimate ? "\(Int((value * 100).rounded()))" : "\(Signal.dBm(value))")
                         .font(.system(size: 66, weight: .bold, design: .rounded))
                         .contentTransition(.numericText())
-                        .animation(.smooth, value: Signal.dBm(value))
-                    Text("dBm (approx.)").font(.caption).foregroundStyle(Theme.secondary)
+                        .animation(.smooth, value: value)
+                    Text(estimate ? "% connection quality" : "dBm (approx.)").font(.caption).foregroundStyle(Theme.secondary)
                     Text(Signal.label(value))
                         .font(.subheadline.weight(.bold))
                         .foregroundStyle(Signal.color(value))
@@ -110,8 +111,12 @@ struct DashboardView: View {
                 Spacer()
                 if connected { Circle().fill(Signal.color(monitor.quality)).frame(width: 10, height: 10) }
             }
-            SignalGauge(q: monitor.quality, connected: connected)
+            SignalGauge(q: monitor.quality, connected: connected, estimate: monitor.usingEstimate)
             statusBanner
+            if monitor.usingEstimate {
+                Text("This iPhone reports no Wi-Fi strength to apps, so WiFi Heatmap measures connection quality (latency and speed) instead. Dead zones still show up as drops.")
+                    .font(.footnote).foregroundStyle(Theme.secondary)
+            }
             if connected {
                 Sparkline(values: monitor.history).frame(height: 54)
                 Text("Walk around – the needle moves as you leave the router.")

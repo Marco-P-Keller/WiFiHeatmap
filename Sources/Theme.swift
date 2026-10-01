@@ -48,6 +48,11 @@ enum Signal {
     /// iOS only exposes a 0…1 strength value; this maps it to an approximate dBm figure for display.
     static func dBm(_ q: Double) -> Int { Int((-90 + 60 * min(max(q, 0), 1)).rounded()) }
 
+    /// "-52 dBm" for real iOS signal readings, "72%" when only an estimated connection quality is available.
+    static func text(_ q: Double, estimated: Bool?) -> String {
+        estimated == true ? "\(Int((min(max(q, 0), 1) * 100).rounded()))%" : "\(dBm(q)) dBm"
+    }
+
     static let legend = LinearGradient(
         stops: stops.map { .init(color: Color(red: $0.1.r, green: $0.1.g, blue: $0.1.b), location: $0.0) },
         startPoint: .leading, endPoint: .trailing)

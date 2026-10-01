@@ -92,7 +92,7 @@ struct ScanResultView: View {
     private var stats: some View {
         HStack(spacing: 10) {
             stat("Average", Signal.label(session.averageQ), Signal.color(session.averageQ))
-            stat("Weakest", "\(Signal.dBm(session.weakestQ)) dBm", Signal.color(session.weakestQ))
+            stat("Weakest", Signal.text(session.weakestQ, estimated: session.estimated), Signal.color(session.weakestQ))
             stat("Dead area", "\(Int((session.deadFraction * 100).rounded()))%", session.deadFraction > 0.1 ? .red : .green)
         }
     }
@@ -114,7 +114,7 @@ struct ScanResultView: View {
                 HStack {
                     Image(systemName: "xmark.circle.fill").foregroundStyle(.red)
                     TextField("Room name", text: $pin.note)
-                    Text("\(Signal.dBm(pin.q)) dBm").font(.footnote.monospacedDigit()).foregroundStyle(Theme.secondary)
+                    Text(Signal.text(pin.q, estimated: session.estimated)).font(.footnote.monospacedDigit()).foregroundStyle(Theme.secondary)
                 }
                 .padding(.vertical, 4)
             }
@@ -212,7 +212,7 @@ struct ShareCardView: View {
                 SignalLegend()
                 HStack(spacing: 24) {
                     pill("Dead area", "\(Int((session.deadFraction * 100).rounded()))%")
-                    pill("Weakest", "\(Signal.dBm(session.weakestQ)) dBm")
+                    pill("Weakest", Signal.text(session.weakestQ, estimated: session.estimated))
                     pill("Grade", session.grade)
                 }
                 Spacer(minLength: 0)

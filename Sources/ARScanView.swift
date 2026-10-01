@@ -72,7 +72,7 @@ struct ARScanView: View {
                 Image(systemName: "wifi").foregroundStyle(Signal.color(monitor.quality))
                 VStack(alignment: .leading, spacing: 0) {
                     Text(monitor.ssid ?? "No Wi-Fi").font(.subheadline.weight(.semibold)).lineLimit(1)
-                    Text("\(Signal.label(monitor.quality)) · \(Signal.dBm(monitor.quality)) dBm")
+                    Text("\(Signal.label(monitor.quality)) · \(Signal.text(monitor.quality, estimated: monitor.usingEstimate))")
                         .font(.caption2).foregroundStyle(.white.opacity(0.75))
                 }
             }
