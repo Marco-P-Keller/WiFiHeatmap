@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00DF3B8464F0F326B5AE0670 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0B0C0A1BB52EE98C70ED4 /* RootView.swift */; };
+		06C705089332F77BD1ECA76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507C6A156839F39EEAA3B06D /* Assets.xcassets */; };
+		12F47A6F8262970C19FAE179 /* ARScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093BE5FD7B8F3B4E00891E8 /* ARScanController.swift */; };
+		15B4E5ADED86CF08157056DC /* HeatmapCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23DAA40851E90290B23EAC /* HeatmapCanvas.swift */; };
+		164B55EDE3D3CEB4067B29C0 /* WiFiMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C0CB2794F51587893245D /* WiFiMonitor.swift */; };
+		2E9450B63C6216849D469FBD /* ARScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21B1796C4042DFD1048502 /* ARScanView.swift */; };
+		340E292ADE0EB70097934F77 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23385056CA228F6059EC99D1 /* Theme.swift */; };
+		3C36AA7AF268B7280B370675 /* Insights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B482A9293B806D3A961A41A /* Insights.swift */; };
+		57D66CE72F749B7D27E5B4B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 20470C60603F9FF6C7D7C79D /* PrivacyInfo.xcprivacy */; };
+		6AE0C882CC4B43229BBDA9E0 /* WiFiHeatmapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9F6FB1BEFF3FA24D0BA41 /* WiFiHeatmapApp.swift */; };
+		6E241CDDA5B24FED8B990B70 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726CEBC42E01B17CBD8A255 /* Models.swift */; };
+		7EA4A6EADF0CA1A2B5FF29F1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFDDA5E3A13B30CA90BCF4 /* Config.swift */; };
+		7F51AB1DFBF887E502CFDB63 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4907893ABF9DFD16E25C03B /* OnboardingView.swift */; };
+		8C17112C57C2EA2090913FC4 /* SpeedTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF8344EF6FF38ED051A03 /* SpeedTester.swift */; };
+		934EA8CB5AA701A417DA3C82 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6847D917E4C1F20A4DDEF2C0 /* ScanResultView.swift */; };
+		96A9D1A0E7BF8BD1C971BD09 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190ABDA062F5DFD86701044 /* DashboardView.swift */; };
+		A1B997B9711B7E0D9D420AD2 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D8B89E0EB717C095708FA /* PurchaseManager.swift */; };
+		B55CD30CB39DB0DDAEE5362C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDC6798E106DAA6C003EE4 /* SettingsView.swift */; };
+		CE3092F9B100D0CA648490A5 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B80D11A86D161DCB9D2AF /* PaywallView.swift */; };
+		D31E0A2C92355E7600ACA7F0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429C8398C9AA50CB0617298 /* Store.swift */; };
+		FD75681021BB658C75E8528B /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7351BD3BCCEE0963D1A41723 /* LogView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A21B1796C4042DFD1048502 /* ARScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScanView.swift; sourceTree = "<group>"; };
+		115AF8344EF6FF38ED051A03 /* SpeedTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTester.swift; sourceTree = "<group>"; };
+		1AEDC6798E106DAA6C003EE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		20470C60603F9FF6C7D7C79D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		23385056CA228F6059EC99D1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		398C0CB2794F51587893245D /* WiFiMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMonitor.swift; sourceTree = "<group>"; };
+		3B0D8B89E0EB717C095708FA /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		4190ABDA062F5DFD86701044 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		4FA91B9A1CA1F261138F1567 /* WiFiHeatmap.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WiFiHeatmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		507C6A156839F39EEAA3B06D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57B0B0C0A1BB52EE98C70ED4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		6847D917E4C1F20A4DDEF2C0 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
+		6B482A9293B806D3A961A41A /* Insights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insights.swift; sourceTree = "<group>"; };
+		7351BD3BCCEE0963D1A41723 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		8726CEBC42E01B17CBD8A255 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A31B80D11A86D161DCB9D2AF /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		B093BE5FD7B8F3B4E00891E8 /* ARScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScanController.swift; sourceTree = "<group>"; };
+		B4907893ABF9DFD16E25C03B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		CDDFDDA5E3A13B30CA90BCF4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EB23DAA40851E90290B23EAC /* HeatmapCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapCanvas.swift; sourceTree = "<group>"; };
+		F429C8398C9AA50CB0617298 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		FAC9F6FB1BEFF3FA24D0BA41 /* WiFiHeatmapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiHeatmapApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2B0CE2D0997ED1EF4E3BCDE1 = {
+			isa = PBXGroup;
+			children = (
+				20470C60603F9FF6C7D7C79D /* PrivacyInfo.xcprivacy */,
+				5426C7F7B30F9B1E47B4E880 /* Resources */,
+				4E56935484E5D2A5506001FA /* Sources */,
+				E06641609DDEAB2B499855AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E56935484E5D2A5506001FA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B093BE5FD7B8F3B4E00891E8 /* ARScanController.swift */,
+				0A21B1796C4042DFD1048502 /* ARScanView.swift */,
+				CDDFDDA5E3A13B30CA90BCF4 /* Config.swift */,
+				4190ABDA062F5DFD86701044 /* DashboardView.swift */,
+				EB23DAA40851E90290B23EAC /* HeatmapCanvas.swift */,
+				6B482A9293B806D3A961A41A /* Insights.swift */,
+				7351BD3BCCEE0963D1A41723 /* LogView.swift */,
+				8726CEBC42E01B17CBD8A255 /* Models.swift */,
+				B4907893ABF9DFD16E25C03B /* OnboardingView.swift */,
+				A31B80D11A86D161DCB9D2AF /* PaywallView.swift */,
+				3B0D8B89E0EB717C095708FA /* PurchaseManager.swift */,
+				57B0B0C0A1BB52EE98C70ED4 /* RootView.swift */,
+				6847D917E4C1F20A4DDEF2C0 /* ScanResultView.swift */,
+				1AEDC6798E106DAA6C003EE4 /* SettingsView.swift */,
+				115AF8344EF6FF38ED051A03 /* SpeedTester.swift */,
+				F429C8398C9AA50CB0617298 /* Store.swift */,
+				23385056CA228F6059EC99D1 /* Theme.swift */,
+				FAC9F6FB1BEFF3FA24D0BA41 /* WiFiHeatmapApp.swift */,
+				398C0CB2794F51587893245D /* WiFiMonitor.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5426C7F7B30F9B1E47B4E880 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				507C6A156839F39EEAA3B06D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E06641609DDEAB2B499855AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FA91B9A1CA1F261138F1567 /* WiFiHeatmap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CEA889A6C8FAE04D50BAC41 /* WiFiHeatmap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 581C173EBFC0A40CE43FE21D /* Build configuration list for PBXNativeTarget "WiFiHeatmap" */;
+			buildPhases = (
+				DD2883BD85F64BEEED1E5F11 /* Sources */,
+				F88A2749C63C789B47DAB536 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiHeatmap;
+			packageProductDependencies = (
+			);
+			productName = WiFiHeatmap;
+			productReference = 4FA91B9A1CA1F261138F1567 /* WiFiHeatmap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80B93BCF5E56D06D1D83BF49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0CEA889A6C8FAE04D50BAC41 = {
+						DevelopmentTeam = B97SQSQBMR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F8B72FCA16259CEC943A72E0 /* Build configuration list for PBXProject "WiFiHeatmap" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2B0CE2D0997ED1EF4E3BCDE1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E06641609DDEAB2B499855AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CEA889A6C8FAE04D50BAC41 /* WiFiHeatmap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F88A2749C63C789B47DAB536 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06C705089332F77BD1ECA76C /* Assets.xcassets in Resources */,
+				57D66CE72F749B7D27E5B4B5 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD2883BD85F64BEEED1E5F11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F47A6F8262970C19FAE179 /* ARScanController.swift in Sources */,
+				2E9450B63C6216849D469FBD /* ARScanView.swift in Sources */,
+				7EA4A6EADF0CA1A2B5FF29F1 /* Config.swift in Sources */,
+				96A9D1A0E7BF8BD1C971BD09 /* DashboardView.swift in Sources */,
+				15B4E5ADED86CF08157056DC /* HeatmapCanvas.swift in Sources */,
+				3C36AA7AF268B7280B370675 /* Insights.swift in Sources */,
+				FD75681021BB658C75E8528B /* LogView.swift in Sources */,
+				6E241CDDA5B24FED8B990B70 /* Models.swift in Sources */,
+				7F51AB1DFBF887E502CFDB63 /* OnboardingView.swift in Sources */,
+				CE3092F9B100D0CA648490A5 /* PaywallView.swift in Sources */,
+				A1B997B9711B7E0D9D420AD2 /* PurchaseManager.swift in Sources */,
+				00DF3B8464F0F326B5AE0670 /* RootView.swift in Sources */,
+				934EA8CB5AA701A417DA3C82 /* ScanResultView.swift in Sources */,
+				B55CD30CB39DB0DDAEE5362C /* SettingsView.swift in Sources */,
+				8C17112C57C2EA2090913FC4 /* SpeedTester.swift in Sources */,
+				D31E0A2C92355E7600ACA7F0 /* Store.swift in Sources */,
+				340E292ADE0EB70097934F77 /* Theme.swift in Sources */,
+				6AE0C882CC4B43229BBDA9E0 /* WiFiHeatmapApp.swift in Sources */,
+				164B55EDE3D3CEB4067B29C0 /* WiFiMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7ED0BCE539661B260E61199D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiFiHeatmap.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Heatmap";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera shows your room in AR so the Wi-Fi heatmap can be drawn on your floor. Nothing is recorded or uploaded.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "iOS requires Location access to read your Wi-Fi signal strength. Your location is never stored or shared.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.connexa.WiFiHeatmap;
+				PRODUCT_NAME = WiFiHeatmap;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B1290F847984972835ADEA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiFiHeatmap.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Heatmap";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera shows your room in AR so the Wi-Fi heatmap can be drawn on your floor. Nothing is recorded or uploaded.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "iOS requires Location access to read your Wi-Fi signal strength. Your location is never stored or shared.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.connexa.WiFiHeatmap;
+				PRODUCT_NAME = WiFiHeatmap;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C20BE11DFC22C2EFD5764B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B97SQSQBMR;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D7E9F5B8AB3BA5AF6E95D057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B97SQSQBMR;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		581C173EBFC0A40CE43FE21D /* Build configuration list for PBXNativeTarget "WiFiHeatmap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1290F847984972835ADEA92 /* Debug */,
+				7ED0BCE539661B260E61199D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8B72FCA16259CEC943A72E0 /* Build configuration list for PBXProject "WiFiHeatmap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20BE11DFC22C2EFD5764B74 /* Debug */,
+				D7E9F5B8AB3BA5AF6E95D057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80B93BCF5E56D06D1D83BF49 /* Project object */;
+}

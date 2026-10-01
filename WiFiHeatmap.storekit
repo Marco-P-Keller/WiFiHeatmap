@@ -1,0 +1,56 @@
+{
+  "identifier" : "A1B2C3D4",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : false,
+      "internalID" : "L1FETIME1",
+      "localizations" : [ { "description" : "Unlock everything forever", "displayName" : "WiFi Heatmap Pro Lifetime", "locale" : "en_US" } ],
+      "productID" : "com.connexa.WiFiHeatmap.pro.lifetime",
+      "referenceName" : "Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : { "_failTransactionsEnabled" : false },
+  "subscriptionGroups" : [
+    {
+      "id" : "21F00001",
+      "localizations" : [],
+      "name" : "WiFi Heatmap Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "A4NUAL001",
+          "introductoryOffer" : { "internalID" : "I4NUAL001", "numberOfPeriods" : 1, "paymentMode" : "free", "subscriptionPeriod" : "P3D" },
+          "localizations" : [ { "description" : "Unlock everything for a year", "displayName" : "Pro Yearly", "locale" : "en_US" } ],
+          "productID" : "com.connexa.WiFiHeatmap.pro.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Yearly",
+          "subscriptionGroupID" : "21F00001",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "W33KLY001",
+          "introductoryOffer" : { "internalID" : "I33KLY001", "numberOfPeriods" : 1, "paymentMode" : "free", "subscriptionPeriod" : "P3D" },
+          "localizations" : [ { "description" : "Unlock everything weekly", "displayName" : "Pro Weekly", "locale" : "en_US" } ],
+          "productID" : "com.connexa.WiFiHeatmap.pro.weekly",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Pro Weekly",
+          "subscriptionGroupID" : "21F00001",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : { "major" : 3, "minor" : 0 }
+}
